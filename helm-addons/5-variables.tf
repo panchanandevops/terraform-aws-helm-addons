@@ -15,7 +15,7 @@ variable "cluster_autoscaler" {
     enable              = true
     region              = "us-east-1"
     helm_chart_version  = "9.37.0"
-    path_to_values_file = "${path.module}/values/cluster_autoscaler.yaml"
+    path_to_values_file = ""
   }
 }
 
@@ -25,7 +25,7 @@ variable "metrics_server" {
   default = {
     enable              = true
     helm_chart_version  = "3.12.1"
-    path_to_values_file = "${path.module}/values/metrics_server.yaml"
+    path_to_values_file = ""
   }
 }
 
@@ -33,10 +33,10 @@ variable "aws_lbc" {
   description = "Defines all the parameters for AWS LoadBalancer Controller"
   type        = map(any)
   default = {
-      enable              = true
-      helm_chart_version  = "1.7.2"
-      path_to_values_file = "${path.module}/values/aws_lbc.yaml"
-    }
+    enable              = true
+    helm_chart_version  = "1.7.2"
+    path_to_values_file = ""
+  }
 }
 
 variable "external_nginx_ingress_controller" {
@@ -45,6 +45,6 @@ variable "external_nginx_ingress_controller" {
   default = {
     enable              = true
     helm_chart_version  = "4.10.1"
-    path_to_values_file = "${path.module}/values/nginx_ingress_controller.yaml"
+    path_to_values_file = ""
   }
 }
