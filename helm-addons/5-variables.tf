@@ -36,6 +36,7 @@ variable "aws_lbc" {
     enable              = true
     helm_chart_version  = "1.7.2"
     path_to_values_file = ""
+    path_to_policy_file = ""
   }
 }
 

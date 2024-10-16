@@ -25,7 +25,7 @@ resource "aws_iam_role" "aws_lbc" {
 resource "aws_iam_policy" "aws_lbc" {
   count = var.aws_lbc.enable ? 1 : 0
 
-  policy = file("${path.module}/policy/AWSLoadBalancerController.json")
+  policy = file(var.aws_lbc.path_to_policy_file)
   name   = "AWSLoadBalancerController"
 }
 
