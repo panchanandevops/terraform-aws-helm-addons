@@ -1,7 +1,7 @@
 resource "helm_release" "external_nginx" {
   count = var.external_nginx_ingress_controller.enable ? 1 : 0
   
-  name = "${var.env}-${var.eks_name}-external-nginx-ingress-controller"
+  name = "${var.env}-${var.eks_name}-extenal"
 
   repository       = "https://kubernetes.github.io/ingress-nginx"
   chart            = "ingress-nginx"
